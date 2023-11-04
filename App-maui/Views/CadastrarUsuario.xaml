@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CraftEd.Views.CadastrarUsuario"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Cadastrar Usuário">
+    <ContentPage.Content>
+
+        <StackLayout BackgroundColor="#F4F4F4">
+
+            <ImageButton
+                Margin="10"
+                BackgroundColor="Transparent"
+                Clicked="Close"
+                HeightRequest="30"
+                HorizontalOptions="End"
+                Source="close_icon.png"
+                VerticalOptions="Start"
+                WidthRequest="30" />
+
+            <Image
+                HorizontalOptions="Center"
+                Source="D:\programacao\linguagens\csharp\maui\App-maui\App-maui\Resources\Images\64x64\happy2.png"
+                WidthRequest="128" />
+
+            <Entry
+                x:Name="NicknameEntry"
+                HorizontalOptions="Center"
+                Placeholder="Nome"
+                Text="{Binding Nome}"
+                WidthRequest="400" />
+            <Entry
+                x:Name="EmailEntry"
+                HorizontalOptions="Center"
+                Placeholder="Email"
+                Text="{Binding Email}"
+                WidthRequest="400" />
+            <Entry
+                x:Name="PasswordEntry"
+                HorizontalOptions="Center"
+                IsPassword="True"
+                Placeholder="Senha"
+                Text="{Binding Senha}"
+                WidthRequest="400" />
+            <Entry
+                HorizontalOptions="Center"
+                Placeholder="Contato"
+                Text="{Binding Contato}"
+                WidthRequest="400" />
+            <Entry
+                HorizontalOptions="Center"
+                Placeholder="Telefone"
+                Text="{Binding Telefone}"
+                WidthRequest="400" />
+
+            <Button
+                Margin="20"
+                BackgroundColor="#00664f"
+                Clicked="OnCreateUserClicked"
+                HeightRequest="40"
+                HorizontalOptions="Center"
+                Text="Cadastrar"
+                TextColor="White"
+                WidthRequest="200" />
+
+            <Button
+                BackgroundColor="#F4F4F4"
+                Clicked="Close"
+                Text="Cancelar"
+                TextColor="Grey" />
+
+
+            <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                <CheckBox IsChecked="true" Color="#00664f" />
+                <Label
+                    Text="Aceito os Termos e Condições"
+                    TextColor="#00664f"
+                    VerticalTextAlignment="Center" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

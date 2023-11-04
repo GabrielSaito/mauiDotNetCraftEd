@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CraftEd.Views.Tarefas"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Tarefas">
+    <StackLayout Padding="20">
+        <Label
+            Margin="0,20,0,10"
+            FontSize="20"
+            HorizontalOptions="CenterAndExpand"
+            Text="Lista de Tarefas" />
+        <ListView x:Name="TarefasListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Detail="{Binding Descricao}" Text="{Binding Nome}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CraftEd.Views.Login"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Login">
+
+    <Border Background="#d9d9d9">
+        <VerticalStackLayout Margin="380,30,380,30" BackgroundColor="White">
+
+            <Label
+                Margin="0,30,0,30"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="CraftEd"
+                TextColor="#4dc591" />
+            <Image Source="D:\programacao\linguagens\csharp\maui\App-maui\App-maui\Resources\Images\64x64\school.png" WidthRequest="64" />
+
+
+            <Entry
+                x:Name="EmailEntry"
+                Keyboard="Email"
+                Placeholder="Email" />
+            <Entry
+                x:Name="SenhaEntry"
+                IsPassword="True"
+                Placeholder="Senha" />
+
+
+            <Label
+                Margin="5"
+                HorizontalOptions="Center"
+                Text="Esqueceu a senha"
+                TextColor="#00654d"
+                VerticalOptions="Center">
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCommand}" CommandParameter="https://learn.microsoft.com/dotnet/maui/" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Button
+                Margin="0,30,0,30"
+                BackgroundColor="#4dc591"
+                Clicked="TelaPrincipal"
+                HorizontalOptions="Center"
+                Text="Entrar"
+                TextColor="white"
+                WidthRequest="300" />
+            <Label
+                x:Name="ErrorLabel"
+                Text=""
+                TextColor="Red" />
+
+            <Button
+                Margin="0,30,0,30"
+                BackgroundColor="Transparent"
+                Clicked="CadastrarUsuario"
+                HorizontalOptions="Center"
+                Text="Não espere mais! Cadastre-se"
+                TextColor="#00654d"
+                WidthRequest="300" />
+        </VerticalStackLayout>
+    </Border>
+</ContentPage>

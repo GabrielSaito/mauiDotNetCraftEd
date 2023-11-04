@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CraftEd.Views.EnviarEmail"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="EnviarEmail">
+
+     
+    <StackLayout Padding="20" BackgroundColor="#f2f2f2">
+        <Button
+            Margin="0,5,0,10"
+            Clicked="Sair"
+            HorizontalOptions="Start"
+            WidthRequest="24" />
+        <Grid>
+            <Label Margin="10,10,10,10"  Text="Email" FontSize="18" TextColor="Grey" HorizontalOptions="CenterAndExpand"> </Label>
+        </Grid>
+        <Frame
+            BackgroundColor="White"
+            BorderColor="Transparent"
+            CornerRadius="10"
+            HasShadow="True">
+            <StackLayout>
+                <StackLayout
+                    
+                    Margin="10,10,0,10"
+                    HorizontalOptions="StartAndExpand"
+                    Orientation="Horizontal">
+                    <Image
+                        Aspect="AspectFit"
+                        HeightRequest="40"
+                        Source="gmail_logo.png"
+                        WidthRequest="40" />
+                </StackLayout>
+                <Entry
+                    x:Name="AssuntoEntry"
+                    Margin="10,0,10,10"
+                    BackgroundColor="#f4f4f4"
+                    FontSize="18"
+                    Placeholder="Assunto"
+                    TextColor="Grey" />
+                <Editor
+                    x:Name="CorpoEditor"
+                    Margin="10,0,10,20"
+                    BackgroundColor="#f4f4f4"
+                    HeightRequest="200"
+                    Placeholder="Corpo do E-mail"
+                    TextColor="Grey" />
+                <Entry
+                    x:Name="DestinatarioEntry"
+                    Margin="10,0,10,10"
+                    BackgroundColor="#f4f4f4"
+                    FontSize="18"
+                    Placeholder="Destinatário"
+                    TextColor="Grey" />
+                <Button
+                    Margin="10,0,10,10"
+                    BackgroundColor="#00664f"
+                    CornerRadius="10"
+                    FontSize="18"
+                    HeightRequest="40"
+                    
+                    Text="Anexar"
+                    TextColor="White" />
+                <StackLayout
+                    Margin="10,0"
+                    HorizontalOptions="End"
+                    Orientation="Horizontal">
+                    <Button
+                        BackgroundColor="Transparent"
+                        Clicked="Sair"
+                        CornerRadius="10"
+                        HeightRequest="40"
+                        ImageSource="exit_icon.png"
+                        WidthRequest="40" />
+                    <Button
+                        BackgroundColor="Transparent"
+                        CornerRadius="10"
+                        HeightRequest="40"
+                        ImageSource="camera_icon.png"
+                        WidthRequest="40" />
+                    <Button
+                        BackgroundColor="Transparent"
+                        CornerRadius="10"
+                        HeightRequest="40"
+                        ImageSource="image_icon.png"
+                        WidthRequest="40" />
+                    <Button
+                        BackgroundColor="#00664f"
+                        Clicked="Enviar"
+                        CornerRadius="10"
+                        FontSize="18"
+                        HeightRequest="40"
+                        Text="Enviar"
+                        TextColor="White"
+                        WidthRequest="100" />
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

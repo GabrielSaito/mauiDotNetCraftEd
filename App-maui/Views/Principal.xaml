@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CraftEd.Views.Principal"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Principal">
+
+    <Border Background="White">
+
+        <ScrollView>
+            <StackLayout>
+                <FlexLayout Direction="Column">
+                    <FlexLayout Padding="0" Direction="Row">
+
+                        <VerticalStackLayout
+                            BackgroundColor="#dddddd"
+                            FlexLayout.Basis="10"
+                            FlexLayout.Order="1"
+                            HeightRequest="1500"
+                            HorizontalOptions="Start"
+                            WidthRequest="300">
+                            <VerticalStackLayout
+                                BackgroundColor="#dddddd"
+                                FlexLayout.Basis="Auto"
+                                FlexLayout.Order="1"
+                                HeightRequest="200"
+                                HorizontalOptions="Start"
+                                WidthRequest="300">
+                                <ImageButton
+                                    Margin="5"
+                                    BackgroundColor="Grey"
+                                    CornerRadius="30"
+                                    HeightRequest="64"
+                                    HorizontalOptions="Center"
+                                    Source="D:\programacao\linguagens\csharp\maui\App-maui\App-maui\Resources\Images\64x64\cap.png"
+                                    VerticalOptions="Center"
+                                    WidthRequest="64" />
+                                <Label
+                                    Margin="20"
+                                    FontSize="24"
+                                    HorizontalOptions="Center"
+                                    Text="Professor 1"
+                                    TextColor="#00624a" />
+
+                                <Button Clicked="Tarefas" Text="Tarefas" />
+                                <Button Text="Matérias" />
+                                <Button Clicked="Alunos" Text="Alunos" />
+                                <Button Clicked="Chamada" Text="Chamada" />
+                                <Button Clicked="AbrirChat" Text="Chat" />
+                                <Button Clicked="EnviarEmail" Text="Enviar Email" />
+                                <Button Clicked="Logout" Text="Sair" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </FlexLayout>
+                </FlexLayout>
+
+
+                <VerticalStackLayout
+                    Margin="0,20,0,20"
+                    BackgroundColor="White"
+                    HeightRequest="64"
+                    HorizontalOptions="Center"
+                    WidthRequest="500">
+                    <SearchBar
+                        Background="#dddddd"
+                        BackgroundColor="#dddddd"
+                        HorizontalOptions="Center"
+                        Placeholder="Pesquisar"
+                        PlaceholderColor="White"
+                        TextColor="White"
+                        WidthRequest="500" />
+                </VerticalStackLayout>
+
+
+                <BoxView BackgroundColor="Black" WidthRequest="800" />
+
+                <VerticalStackLayout
+                    Margin="0,0,0,0"
+                    BackgroundColor="White"
+                    HeightRequest="344"
+                    HorizontalOptions="Center"
+                    WidthRequest="500">
+
+                    <Editor
+                        Margin="0,0,0,20"
+                        BackgroundColor="#E1E8ED"
+                        HeightRequest="200"
+                        Placeholder="Digite seu post aqui" />
+                    <StackLayout HorizontalOptions="End" Orientation="Horizontal">
+                        <Button
+                            BackgroundColor="#00664f"
+                            CornerRadius="10"
+                            FontAttributes="Bold"
+                            HeightRequest="40"
+                            Text="Imagem"
+                            TextColor="White"
+                            WidthRequest="100" />
+                        <Button
+                            BackgroundColor="#00664f"
+                            CornerRadius="10"
+                            FontAttributes="Bold"
+                            HeightRequest="40"
+                            Text="Publicar"
+                            TextColor="White"
+                            WidthRequest="100" />
+                    </StackLayout>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout
+                    Margin="0,0,0,0"
+                    BackgroundColor="#4dc591"
+                    HeightRequest="344"
+                    HorizontalOptions="Center"
+                    WidthRequest="500">
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="128" />
+                            <RowDefinition />
+                            <RowDefinition Height="128" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <BoxView
+                            Margin="10"
+                            CornerRadius="16"
+                            Color="Green" />
+
+                        <BoxView
+                            Grid.Column="1"
+                            Margin="10"
+                            CornerRadius="16"
+                            Color="Blue" />
+
+                        <ImageButton />
+
+                        <BoxView
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Margin="10"
+                            CornerRadius="16"
+                            Color="Magenta" />
+
+                        <BoxView
+                            Grid.Row="2"
+                            Grid.ColumnSpan="1"
+                            Margin="10"
+                            CornerRadius="16"
+                            Color="Bisque" />
+
+                    </Grid>
+                    <Button
+                        Margin="0,20,0,20"
+                        BackgroundColor="#00664f"
+                        HorizontalOptions="Center"
+                        Text="Mais informacões +"
+                        TextColor="White"
+                        WidthRequest="200" />
+
+                </VerticalStackLayout>
+
+
+
+
+                <VerticalStackLayout
+                    Margin="0,50,0,50"
+                    BackgroundColor="#4dc591"
+                    HeightRequest="344"
+                    HorizontalOptions="Center"
+                    WidthRequest="500">
+                    <Label TextColor="#00664f" />
+                    <TableView
+                        Margin="30,0,30,0"
+                        Background="#4dc591"
+                        HasUnevenRows="True"
+                        HorizontalOptions="Center"
+                        Intent="Settings">
+                        <TableRoot>
+                            <TableSection Title="Tarefas Diarias">
+                                <TextCell Detail="Preparar aulas e materiais didáticos." Text="1. Preparar aulas" />
+                                <TextCell Detail="Ministrar aulas para os alunos." Text="2. Ministração de aulas" />
+                                <TextCell Detail="Corrigir trabalhos e provas dos alunos." Text="3. Correção de trabalhos e provas" />
+                                <TextCell Detail="Atender e orientar os alunos individualmente." Text="4. Atendimento aos alunos" />
+                                <TextCell Detail="Participar de reuniões com a equipe pedagógica." Text="5. Participação em reuniões" />
+                            </TableSection>
+                        </TableRoot>
+                    </TableView>
+                    <Button
+                        Margin="0,20,0,20"
+                        BackgroundColor="#00664f"
+                        HorizontalOptions="Center"
+                        Text="Mais informacões +"
+                        TextColor="White"
+                        WidthRequest="200" />
+
+                </VerticalStackLayout>
+
+
+                <FlexLayout Direction="Column">
+                    <Label
+                        BackgroundColor="Pink"
+                        FontSize="18"
+                        HorizontalTextAlignment="Center"
+                        Text="FOOTER" />
+                </FlexLayout>
+
+            </StackLayout>
+        </ScrollView>
+
+    </Border>
+
+</ContentPage>

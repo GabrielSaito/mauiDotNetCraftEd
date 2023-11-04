@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CraftEd.Views.Chat"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Chat">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout
+            BackgroundColor="Red"
+            HorizontalOptions="Start"
+            WidthRequest="300">
+            <Button Text="Perfil" />
+            <Button Clicked="Sair" Text="Sair" />
+
+        </VerticalStackLayout>
+
+        <ScrollView x:Name="scrollView" Orientation="Both">
+            <StackLayout>
+                <StackLayout x:Name="chatContainer" />
+
+            </StackLayout>
+
+        </ScrollView>
+
+        <Grid
+            BackgroundColor="#0084ff"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="EndAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Entry
+                x:Name="messageInput"
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="10"
+                BackgroundColor="White"
+                Placeholder="Digite sua mensagem" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="1"
+                BackgroundColor="#0044ff"
+                Clicked="OnSendMessageClicked"
+                HeightRequest="40"
+                Text="Enviar"
+                TextColor="White"
+                WidthRequest="128" />
+        </Grid>
+
+
+
+
+
+    </Grid>
+
+</ContentPage>

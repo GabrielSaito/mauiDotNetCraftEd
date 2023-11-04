@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CraftEd.Views.Alunos"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+
+        <ContentView
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="0,0,0,00"
+            BackgroundColor="White">
+            <Grid>
+
+                <Button
+                    Margin="10,0,0,0"
+                    BackgroundColor="#00664f"
+                    Clicked="Sair"
+                    HorizontalOptions="Start"
+                    Text="Voltar"
+                    TextColor="White"
+                    VerticalOptions="Start" />
+
+                <Border
+                    HeightRequest="36"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="512">
+
+                    <SearchBar
+                        CancelButtonColor="Grey"
+                        HorizontalTextAlignment="Center"
+                        Placeholder="Pesquisar alunos"
+                        PlaceholderColor="Grey"
+                        TextColor="Grey" />
+
+                </Border>
+
+            </Grid>
+
+
+        </ContentView>
+
+        <ContentView
+            Grid.Row="1"
+            Grid.Column="0"
+            BackgroundColor="White">
+            <Frame
+                BackgroundColor="#4dc591"
+                BorderColor="Transparent"
+                CornerRadius="10"
+                HasShadow="False">
+                <StackLayout>
+                    <Label
+                        Margin="10,10,10,10"
+                        FontSize="16"
+                        HorizontalTextAlignment="Center"
+                        Text="Turmas Disponíveis" />
+
+                    <Button Text="Turma 1" TextColor="#00664f" />
+                    <Button Text="Turma 2" TextColor="#00664f" />
+                </StackLayout>
+            </Frame>
+        </ContentView>
+
+
+
+        <ContentView Grid.Row="1" Grid.Column="1">
+            <StackLayout BackgroundColor="White">
+
+
+                <StackLayout
+                    Padding="10"
+                    BackgroundColor="White"
+                    Orientation="Horizontal">
+                    <Border BackgroundColor="White" HorizontalOptions="FillAndExpand">
+                        <TableView Intent="Menu">
+                            <TableRoot>
+                                <TableSection Title="Chapters" />
+                            </TableRoot>
+                        </TableView>
+                    </Border>
+
+                </StackLayout>
+            </StackLayout>
+        </ContentView>
+    </Grid>
+
+
+</ContentPage>
